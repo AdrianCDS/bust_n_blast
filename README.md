@@ -48,14 +48,19 @@ git clone https://github.com/AdrianCDS/bust_n_blast.git
 - Facem click pe "Build" și se selectează un director de ieșire.
 - Se așteaptă finalizarea procesului.
 
+> [!IMPORTANT]
+> Dacă scena principală sau toate scenele nu sunt deja adăugate în listă, se apasă pe "Add Open Scenes" la fiecare scenă deschisă.
+> - Scena de start este găsită la Assets/Level/Devs/Goran/MainMenuCopy.unity
+> - Scena de joc este găsită la Assets/Level/Devs/Adrian/ArenaExtended.unity
+
 ## Instrucțiuni de instalare și rulare
 
 ### Variante disponibile:
 
-1. Rulare directă din editor (pentru dezvoltatori):
+1. **Rulare directă din editor** (pentru dezvoltatori):
 - Se apasă Play în Unity pentru a lansa jocul în modul de testare.
 
-2. Executabil compilat (pentru utilizatori finali):
+2. **Executabil compilat** (pentru utilizatori finali):
 - După compilarea jocului, în directorul specificat va fi generat un fișier executabil (.exe pentru Windows).
 - Se rulează acest fișier pentru a lansa aplicația.
 
