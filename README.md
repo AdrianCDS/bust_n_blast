@@ -13,7 +13,7 @@ Acest proiect reprezintă implementarea practică a jocului tip shooter multipla
 
 Pentru a compila și rula aplicația local, este necesar:
 
-- Unity Editor versiunea `2022.3.50f1` (versiunea exactă folosită în proiect poate fi verificată în fișierul `ProjectSettings/ProjectVersion.txt`)
+- Unity Editor versiunea `2022.3.50f1`
 - .NET SDK (implicit instalat cu Unity)
 - Sistem de operare: Windows 10+ / macOS / Linux (cu suport Unity)
 - Spațiu liber pe disc: minim 2 GB
@@ -22,7 +22,7 @@ Pentru a compila și rula aplicația local, este necesar:
 ## Tehnologii utilizate
 
 - **Game Engine**: Unity (versiunea exactă: `2022.3.50f1`)
-- **Limbaj de programare**: C# cu .NET 8
+- **Limbaj de programare**: C# cu .NET versiunea 8+
 - **Sistem de control al versiunii**: Git
 
 ## Instrucțiuni de compilare
