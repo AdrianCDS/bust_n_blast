@@ -3493,7 +3493,7 @@ MonoBehaviour:
   HitMask:
     serializedVersion: 2
     m_Bits: 840
-  MaxHitDistance: 300
+  MaxHitDistance: 5000
   maxClipAmmo: 64
   startAmmo: 384
   ReloadTime: 1.5

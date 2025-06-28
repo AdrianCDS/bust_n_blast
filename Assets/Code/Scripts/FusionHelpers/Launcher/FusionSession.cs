@@ -74,7 +74,6 @@ namespace FusionHelpers
                                     string uniqueId = System.Text.Encoding.UTF8.GetString(connectionToken);
 
                                     player.PlayerUniqueId = uniqueId;
-                                    Debug.Log($"<color=orange>[MaybeSpawnNextAvatar]</color>: PlayerID {refByIndex.Value} | PlayerUniqueId {uniqueId}");
                                     player.NetworkedPlayerIndex = refByIndex.Key;
                                     player.InitNetworkState();
                                 }

@@ -99,12 +99,12 @@ namespace FusionHelpers
         public void ToggleReady()
         {
             // Don't allow player to be ready if there are not enough players or teams are unbalanced
-            // if (Runner.TryGetSingleton(out GameManager gameManager))
-            // {
-            //     if (gameManager.NotEnoughPlayers()) return;
+            if (Runner.TryGetSingleton(out GameManager gameManager))
+            {
+                if (gameManager.NotEnoughPlayers()) return;
 
-            //     if (gameManager.TeamsUnbalanced()) return;
-            // }
+                if (gameManager.TeamsUnbalanced()) return;
+            }
 
             Ready = !Ready;
         }

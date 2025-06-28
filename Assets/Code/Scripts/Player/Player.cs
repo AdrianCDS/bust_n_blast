@@ -137,8 +137,6 @@ namespace TeamBasedShooter
         {
             if (PlayerLoggedIn) return;
 
-            Debug.Log($"<color=yellow>[LoginPlayer]</color>: PlayerID {PlayerId} | PlayerDeviceId {PlayerDeviceId}");
-
             var request = new LoginWithCustomIDRequest
             {
                 CustomId = PlayerDeviceId,
@@ -169,11 +167,6 @@ namespace TeamBasedShooter
                 string activeAttachmentIndex = FindActiveAttachment(playerOwnedItems);
                 RPC_SetPlayerAttachments(activeAttachmentIndex, result.Data["RankXp"].Value, result.Data["Rank"].Value, result.Data["Balance"].Value);
             }
-            else
-            {
-                Debug.Log("<color=red>No User Data Found</color>");
-            }
-
         }
 
         private string FindActiveAttachment(Dictionary<string, string> playerOwnedItems)
@@ -538,8 +531,6 @@ namespace TeamBasedShooter
 
         private void SetActiveAttachment()
         {
-            Debug.Log($"<color=green>Change Detected - Setting Active Attachment: {ActiveAttachmentIndex}</color>");
-
             string characterPrefix = PlayerCharacter.ToString().ToLower() + "_attachment_";
 
             // Activate only the attachments that are marked as active
@@ -554,7 +545,6 @@ namespace TeamBasedShooter
                 if (attachmentIndex == ActiveAttachmentIndex)
                 {
                     playerAttachments[i].SetActive(true);
-                    Debug.Log($"<color=cyan>Activated attachment:</color> {attachmentName} | Index: {attachmentIndex}");
                 }
             }
         }
@@ -579,8 +569,6 @@ namespace TeamBasedShooter
         public void ComputeRankXp(Team winningTeam)
         {
             if (!Object.HasInputAuthority) return;
-
-            Debug.Log($"<color=green>Event Received</color>: Winning Team {winningTeam} | Rank {PlayerRank} | XP {PlayerRankXp} | Balance {PlayerBalance}");
 
             bool eligibleForRankChange;
             int currentXp = int.Parse(PlayerRankXp);
@@ -684,8 +672,6 @@ namespace TeamBasedShooter
                     { "Balance", PlayerBalance}
                 }
             };
-
-            Debug.Log($"<color=yellow>[UpdateUserData]</color>: Rank {PlayerRank} | RankXp {PlayerRankXp} | Balance {PlayerBalance}");
 
             PlayFabClientAPI.UpdateUserData(request, OnDataSend, OnError);
         }
